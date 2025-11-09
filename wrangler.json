@@ -2,6 +2,7 @@
 	"compatibility_date": "2025-10-08",
 	"main": "src/index.ts",
 	"name": "openauth",
+	"account_id": "1a481f7cdb7027c30174a692c89cbda1",
 	"upload_source_maps": true,
 	"kv_namespaces": [
 		{
