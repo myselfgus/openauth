@@ -7,7 +7,8 @@
 		"products": [
 			"Workers",
 			"D1",
-			"KV"
+			"KV",
+			"R2"
 		],
 		"categories": [],
 		"preview_icon_url": "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/5764e3ad-0e07-4873-1139-39ba4e6ab200/public",
@@ -19,6 +20,7 @@
 		"valibot": "^1.0.0-beta.9"
 	},
 	"devDependencies": {
+		"@types/node": "^24.10.0",
 		"typescript": "5.8.3",
 		"wrangler": "4.21.x"
 	},
@@ -27,6 +29,14 @@
 		"check": "tsc && wrangler deploy --dry-run",
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
-		"predeploy": "wrangler d1 migrations apply AUTH_DB --remote"
+		"predeploy": "wrangler d1 migrations apply AUTH_DB --remote",
+		"setup": "bash setup-cloudflare.sh",
+		"migrate": "wrangler d1 migrations apply AUTH_DB --remote",
+		"migrate:local": "wrangler d1 migrations apply AUTH_DB --local",
+		"backup": "bash scripts/backup.sh",
+		"optimize": "bash scripts/optimize.sh",
+		"db:shell": "wrangler d1 execute AUTH_DB --remote",
+		"kv:list": "wrangler kv namespace list",
+		"r2:list": "wrangler r2 bucket list"
 	}
 }

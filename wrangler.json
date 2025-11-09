@@ -2,6 +2,7 @@
 	"compatibility_date": "2025-10-08",
 	"main": "src/index.ts",
 	"name": "openauth",
+	"account_id": "1a481f7cdb7027c30174a692c89cbda1",
 	"upload_source_maps": true,
 	"kv_namespaces": [
 		{
@@ -14,6 +15,12 @@
 			"binding": "AUTH_DB",
 			"database_name": "openauth--auth-db",
 			"database_id": "57762bee-b2e0-4772-b2c1-af27135e8476"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "STORAGE",
+			"bucket_name": "openauth-storage"
 		}
 	],
 	"observability": {
